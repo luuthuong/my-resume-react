@@ -9,6 +9,7 @@
     "autoprefixer": "^10.4.4",
     "boxicons": "^2.1.2",
     "clsx": "^1.1.1",
+    "jquery": "^3.6.0",
     "postcss": "^8.4.12",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

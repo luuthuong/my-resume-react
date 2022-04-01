@@ -1,0 +1,65 @@
+@use '../../scss/' as *;
+
+.color{
+    background-color:var(--color-light);
+    position: fixed;
+    right: 10px;
+    top:200px;
+    ion-icon{
+        font-size: 24px;
+    }
+    &__title{
+        color: var(--color-white);
+        ion-icon{
+            cursor: pointer;
+            margin-right: 10px;
+            transition: all .3s ease;
+            &:hover{
+                color:var(--color-primary);
+                transform:scale(1.2);
+            }
+        }
+    }
+    &__symbol{
+        background-color:var(--txt--main-color);
+        box-shadow:$box-shadow;
+    }
+    &__content{
+        &__element{
+            color:var(--color-white);
+            cursor:pointer;
+            &:hover{
+                background-color:var(--main-background);
+            }
+        }
+    }
+    transform:translateX(300px);
+    transition: transform .5s $cubic;
+    &.active{
+        transform:translateX(0);
+    }
+}
+
+.red-color {
+    background-color: var(--txt-red-color);
+}
+
+.blue-color {
+    background-color: var(--txt-blue-color);
+}
+
+.yellow-color {
+    background-color: var(--txt-yellow-color);
+}
+
+.cyan-color {
+    background-color: var(--txt-cyan-color);
+}
+
+.orange-color {
+    background-color: var(--txt-orange-color);
+}
+
+.green-color {
+    background-color: var(--txt-green-color);
+}

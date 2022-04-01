@@ -1,0 +1,67 @@
+@use '../../scss/'as *;
+.circle-navi-container{
+    position: relative;
+}
+.circle-navi {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    right: 10px;
+    top:50%;
+    transform: translateY(-50%);
+    ion-icon{
+        font-size: 24px;
+    }
+    .toggle-circle {
+        background-color: var(--color-light);
+        transform: translateX(50px);
+        cursor: pointer;
+        transition: all .3s ease;
+        box-shadow: $box-shadow-light;
+        &>* {
+            pointer-events: none;
+        color: var(--color-primary);
+        }
+    }
+
+    .element {
+        background-color: var(--color-light);
+        box-shadow: $box-shadow-light;
+        color: var(--txt-color);
+        transform: translateX(110px);
+        transform-origin: 100px;
+        transition: all .3s ease;
+        opacity: 0;
+        transition-delay: calc(0.05s * var(--i));
+
+        &>* {
+            transition: all .5s ease;
+            transform: rotate(calc(360deg / -8*var(--i)));
+            pointer-events: none;
+            color: var(--color-primary);
+        }
+
+        &:hover {
+            filter: drop-shadow(1px 1px 2px var(--color-main)) drop-shadow(1px 1px 4px var(--color-main)) drop-shadow(1px 1px 8px var(--color-main));
+            &>* {
+                transform: rotate(calc(180deg / -8*var(--i)));
+                color:var(--txt-main-color);
+            }
+            ;
+        }
+    }
+
+    &.active {
+        .toggle-circle {
+            transform: rotate(360deg) translateX(0);
+            right: none;
+        }
+
+        .element {
+            opacity:1;
+            transform: rotate(calc(360deg / 8*var(--i)));
+            
+            // transition-delay: calc(0.02s * var(--i));
+        }
+    }
+}

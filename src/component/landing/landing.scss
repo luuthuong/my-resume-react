@@ -1,0 +1,90 @@
+@use '../../scss/'as *;
+
+.overview__contain {
+    ion-icon {
+        color: var(--color-primary);
+        margin-top: 10px;
+        font-size: 30px;
+        cursor: pointer;
+        transition: color .3s linear;
+
+        &:hover {
+            color: var(--color-white);
+        }
+    }
+
+    .overview__infor {
+        border: 1px solid var(--color-light);
+        line-height: 1.5;
+
+        &__content {
+            color: var(--color-white);
+        }
+    }
+
+    .scroll-down {
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border: 2px solid;
+            border-image-slice: 1;
+            border-image-source: var(--color-linear-gradient-main);
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+            border-bottom: 0;
+            border-right: 0;
+            transition: all .2s ease-in-out;
+
+        }
+
+        &::after {
+            bottom: 0;
+            right: 0;
+            border-top: 0;
+            border-left: 0;
+            transition: all .2s ease-in-out;
+
+        }
+
+        &:hover {
+
+            &::before,
+            &::after {
+                animation: scroll 0.3s linear infinite alternate;
+
+            }
+        }
+    }
+
+}
+
+@keyframes scroll {
+    0% {
+        width: 0%;
+        height: 0%;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.portrait {
+    background-image: url(../../assets/Image/portrait.jpg);
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    box-shadow: $box-shadow-light;
+}
+
+.nav__wraper {
+    width: 52%;
+}
