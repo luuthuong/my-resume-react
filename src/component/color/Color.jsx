@@ -1,13 +1,10 @@
 import React from 'react'
 
-import PropTypes from 'prop-types'
-
 import $ from 'jquery'
 
 import './color.scss'
 
 import color from './data'
-
 
 
 const Color = ({className} )=> {

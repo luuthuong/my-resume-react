@@ -10,9 +10,12 @@ import Button,{ButtonPrimary} from '../button/Button';
 
 import About from './../about/About';
 
+import Experient from './../experient/Experient';
+import Project from './../project/Project';
+
 const Social=() => {
 	return (
-		<div className=" absolute left-12 bottom-5" >
+		<div className=" fixed z-50 left-1 bottom-5" >
 				{
 					social.map((item,index) => {
 						return (
@@ -28,12 +31,33 @@ const Social=() => {
 
 const ScrollDown = () => {
 	return (
-		<div className=" absolute z-10 right-10 bottom-5 ">
-		<div className=" scroll-down  text-xl bg-transparent relative bottom-14  cursor-pointer text-blue-400  text-center rotate-90  p-4 ">
-			Scroll Down
-		</div>
-		</div>
-	)
+        <div
+            className=" 
+			fixed z-50 
+			right-0 
+			mobile:-right-5
+			bottom-5 "
+        >
+            <div
+                className=" 
+					scroll-down  
+					text-xl 
+					mobile:text-sm 
+					mobile-small:text-xs 
+					bg-transparent 
+					relative 
+					bottom-14  
+					cursor-pointer 
+					text-blue-400  
+					text-center 
+					rotate-90  
+					select-none
+					p-3 "
+            >
+                Scroll Down
+            </div>
+        </div>
+    );
 }
 
 const Overview=() => {
@@ -43,15 +67,15 @@ const Overview=() => {
                 <div className=" text-xl mb-1 text-blue-200 font-semibold text-center">
                     Hello, I'm
                 </div>
-                <div className=" text-center text-4xl font-semibold">
+                <div className=" text-center text-3xl font-semibold">
                     Luu Thuong
                 </div>
                 <div className=" text-center text-sm font-medium mt-2 text-gray-300">
                     Front End Developer
                 </div>
             </div>
-            <div className="flex justify-center items-center mb-5">
-                <Button className="mr-3">Download CV</Button>
+            <div className="flex justify-center gap-3 w-full mobile-small:flex-col items-center mb-5">
+                <Button className="">Download CV</Button>
                 <ButtonPrimary>Contact</ButtonPrimary>
             </div>
 
@@ -83,6 +107,13 @@ const Langding = () => {
 		<div className="flex justify-center items-center">
 			<About/>
 		</div>
+		<div className="flex  justify-center items-center mt-10">
+			<Experient/>
+		</div>
+		<div className="flex  justify-center items-center mt-10">
+			<Project/>
+		</div>
+
 		</div>
     );
 };

@@ -13,6 +13,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
   &::-webkit-scrollbar{
     display: none;
   }
@@ -22,14 +23,20 @@ body {
 // background:var(--main-background);
 background: #141E30;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(90deg, #264261, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(90deg, #213777, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 li{
   list-style: none;
   cursor: pointer;
 }
+
 ion-icon{
-  color: #ffff;
+  color: var(--color-primary);
   font-weight: 600;
+  font-size: 22px;
+  @include mobile-small{
+    font-size: 14px;
+  }
 }
+

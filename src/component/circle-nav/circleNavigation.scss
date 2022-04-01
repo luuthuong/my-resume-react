@@ -6,7 +6,12 @@
     width: 200px;
     height: 200px;
     position: fixed;
+    z-index: 50;
     right: 10px;
+    @include mobile{
+        transform: translateX(30px);
+    }
+    transition: all .3s ease;
     top:50%;
     transform: translateY(-50%);
     ion-icon{
@@ -14,6 +19,9 @@
     }
     .toggle-circle {
         background-color: var(--color-light);
+        @include mobile{
+            background-color: var(--color-main);
+        }
         transform: translateX(50px);
         cursor: pointer;
         transition: all .3s ease;
@@ -26,6 +34,9 @@
 
     .element {
         background-color: var(--color-light);
+        @include mobile{
+        background-color: var(--color-main);
+        }
         box-shadow: $box-shadow-light;
         color: var(--txt-color);
         transform: translateX(110px);
@@ -52,16 +63,18 @@
     }
 
     &.active {
+        transform: translateX(0);
         .toggle-circle {
-            transform: rotate(360deg) translateX(0);
+            transform: rotate(180deg) translateX(0);
+            @include mobile{
+                transform: rotate(180deg) translateX(0);
+            }
             right: none;
         }
 
         .element {
             opacity:1;
             transform: rotate(calc(360deg / 8*var(--i)));
-            
-            // transition-delay: calc(0.02s * var(--i));
         }
     }
 }

@@ -4,7 +4,11 @@
     background-color:var(--color-light);
     position: fixed;
     right: 10px;
-    top:200px;
+    top:20%;
+    @include mobile{
+    top:8%;
+    }
+
     ion-icon{
         font-size: 24px;
     }

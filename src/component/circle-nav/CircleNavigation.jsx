@@ -16,7 +16,7 @@ const CircleNavigation = ({className,onClick}) => {
     }
     
     return (
-       <div className="circle-navi-container">
+       <div className="circle-navi-container  ">
             <div 
             className={`
                         ${className}
@@ -36,7 +36,7 @@ const CircleNavigation = ({className,onClick}) => {
                         rounded-full  
                         justify-center 
                         items-center
-                        z-50
+                        z-30
                         "
             onClick={
                     ()=>{
