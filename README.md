@@ -1,7 +1,7 @@
 # Resource
- Ion-Icons: https://ionic.io/ionicons
- TailwindCss: https://tailwindcss.com/
- SwiperJs: https://swiperjs.com/
+## Ion-Icons: https://ionic.io/ionicons
+## TailwindCss: https://tailwindcss.com/
+## SwiperJs: https://swiperjs.com/
 
 # Preview 
 ![image](https://user-images.githubusercontent.com/86012214/161226176-d9afe034-81d1-427c-bc4a-a605f6f8fbc1.png)
