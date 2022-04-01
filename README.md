@@ -20,5 +20,5 @@
 </div>
      														  
 <p align="center">
-  <img width="200" src="http://material-bread.org/logo-shadow.svg" alt="Material Bread logo">
+  <img width="200" src="(https://user-images.githubusercontent.com/86012214/161300825-7bd60b6c-7b92-483e-81c9-c55f2c4c1426.png">
 </p>
