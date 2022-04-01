@@ -19,6 +19,6 @@
  <img src="https://user-images.githubusercontent.com/86012214/161300825-7bd60b6c-7b92-483e-81c9-c55f2c4c1426.png">
 </div>
      														  
-<p align="center">
+<p align="center" background="red">
   <img src="https://user-images.githubusercontent.com/86012214/161300825-7bd60b6c-7b92-483e-81c9-c55f2c4c1426.png">
 </p>
