@@ -13,15 +13,13 @@
     }
     transition: all .3s ease;
     top:50%;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
     ion-icon{
         font-size: 24px;
     }
     .toggle-circle {
         background-color: var(--color-light);
-        @include mobile{
-            background-color: var(--color-main);
-        }
+        
         transform: translateX(50px);
         cursor: pointer;
         transition: all .3s ease;
@@ -66,6 +64,9 @@
         transform: translateX(0);
         .toggle-circle {
             transform: rotate(180deg) translateX(0);
+            @include mobile{
+                background-color: var(--color-main);
+            }
             @include mobile{
                 transform: rotate(180deg) translateX(0);
             }

@@ -5,6 +5,8 @@ import { ButtonPrimary } from "./../button/Button";
 
 import aboutImage from "../../assets/Image/about.jpg";
 
+import Card from './../card/Card';
+
 const dataAbout = [
     {
         icon: "school-outline",
@@ -22,58 +24,6 @@ const dataAbout = [
         content: "Professional web developer",
     },
 ];
-
-const Card = () => {
-    return (
-        <div 
-            className=" 
-            card flex  
-            mobile:flex-col 
-            mobile-small:flex-col 
-            gap-3 
-            w-full "
-        >
-            {dataAbout.map((item, index) => {
-                return (
-                    <div
-                        key={index}
-                        className="
-                            text-center 
-                            card-element 
-                            relative  
-                            z-10  
-                            p-3 
-                            flex-1 
-                            flex-col 
-                            h-auto 
-                            items-center 
-                            justify-center  
-                            cursor-pointer  
-                            rounded-lg "
-                        >
-                        <ion-icon name={item.icon}></ion-icon>
-                        <div 
-                            className="
-                                text-white 
-                                font-semibold 
-                                text-xm 
-                                m-3"
-                        >
-                            {item.title}
-                        </div>
-                        <div className="
-                            text-gray-400 
-                            h-12 
-                            font-normal"
-                        >
-                            {item.content}
-                        </div>
-                    </div>
-                );
-            })}
-        </div>
-    );
-};
 
 const About = () => {
     return (
@@ -140,7 +90,7 @@ const About = () => {
                         about__content 
                         w-1/2 
                         mobile-small:w-full
-                        mobile:w-2/3
+                        mobile:w-full
                         flex  
                         flex-col 
                         items-center"
@@ -153,7 +103,7 @@ const About = () => {
                             mobile:w-full
                             "
                     >
-                        <Card />
+                        <Card item={dataAbout} />
                     </div>
                     <div
                         className="

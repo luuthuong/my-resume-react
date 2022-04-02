@@ -30,21 +30,27 @@ const dataProject=[
 ]
 
 const Card=() => {
-    return(
-        <div className="grid grid-cols-3 mobile:grid-cols-1 gap-3">
-            {
-                dataProject.map((item,index) => {
-                    return(
-                        <div
-                            className="
+    return (
+        <div
+            className="
+                grid 
+                grid-cols-3 
+                mobile:grid-cols-1 
+                gap-3"
+        >
+            {dataProject.map((item, index) => {
+                return (
+                    <div
+                        className="
                                 project-card
                                 rounded-xl
                                 p-4
                                 text-center
                             "
-                            key={index}>
-                            <div 
-                                className="
+                        key={index}
+                    >
+                        <div
+                            className="
                                     relative
                                     project-img-wraper
                                     flex 
@@ -53,27 +59,38 @@ const Card=() => {
                                     overflow-hidden
                                     rounded-2xl 
                                     items-center"
-                                    onClick={()=>window.open(item.link)}
-                            >
-                                <img 
-                                    className="
+                            onClick={() => window.open(item.link)}
+                        >
+                            <img
+                                className="
                                         project-img
                                         w-full 
                                     "
-                                    src={item.img} alt="" />
-                            </div>
-                            <div>
-                                <div className="text-white text-xl mobile:text-base my-3 h-8 font-bold">
-                                    {item.name}
-                                </div>
-                                <Button onClick={()=>window.open(item.link)}>GitHub</Button>
-                            </div>
+                                src={item.img}
+                                alt=""
+                            />
                         </div>
-                    )
-                })
-            }
+                        <div>
+                            <div
+                                className="
+                                        text-white 
+                                        text-xl 
+                                        mobile:text-base 
+                                        my-3 
+                                        h-8 
+                                        font-bold"
+                            >
+                                {item.name}
+                            </div>
+                            <Button onClick={() => window.open(item.link)}>
+                                GitHub
+                            </Button>
+                        </div>
+                    </div>
+                );
+            })}
         </div>
-    )
+    );
 }
 
 const Project = () => {
