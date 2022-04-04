@@ -5,7 +5,7 @@ import "./experient.scss";
 const RenderStar = (props) => {
     const sumStar = [];
     for (let index = 0; index < props.star; index++) {
-        sumStar.push(<ion-icon name="star"></ion-icon>);
+        sumStar.push(<ion-icon key={index} name="star"></ion-icon>);
     }
     return sumStar;
 };
@@ -148,6 +148,7 @@ const Experient = () => {
     return (
         <div className=" w-full p-10">
             <div
+                data-aos="fade-up"
                 className="
                 text-xm  text-gray-300 
                 font-normal 
@@ -156,6 +157,7 @@ const Experient = () => {
                 Experience
             </div>
             <div
+                data-aos="fade-up"
                 className="
                 text-4xl 
                 mt-2 
@@ -166,6 +168,7 @@ const Experient = () => {
                 Skill I have
             </div>
             <div
+                 data-aos="zoom-in-up"
                 className="
                 mt-10 
                 flex 

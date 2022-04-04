@@ -96,7 +96,7 @@ const Card=() => {
 const Project = () => {
   return (
     <div className=" w-full p-10">
-        <div className="header mb-10">
+        <div data-aos="fade-up" className="header mb-10">
                 <h1 
                     className="
                         text-center 
@@ -116,7 +116,7 @@ const Project = () => {
                     Some product
                 </h1>
         </div>
-        <div>
+        <div data-aos="fade-up">
                 <Card/>
         </div>
     </div>

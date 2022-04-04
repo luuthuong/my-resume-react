@@ -13,14 +13,22 @@ import About from "./../about/About";
 import Experient from "./../experient/Experient";
 
 import Project from "./../project/Project";
+
 import Contact from './../contact/Contact';
+
+import '../../../node_modules/aos/dist/aos.css'
+
+import AOS from 'aos'
+
+import {Link ,Element} from 'react-scroll'
+
 
 const Social = () => {
     return (
         <div className=" fixed z-50 left-1 bottom-5">
             {social.map((item, index) => {
                 return (
-                    <div onClick={() => window.open(item.link)}>
+                    <div key={index} onClick={() => window.open(item.link)}>
                         <ion-icon name={item.icon}></ion-icon>
                     </div>
                 );
@@ -29,14 +37,16 @@ const Social = () => {
     );
 };
 
-const ScrollDown = () => {
+const ScrollDown = (props) => {
     return (
-        <div
-            className=" 
+        <Link
+            to="bottom"
+            className={` 
+            ${props.className}
 			fixed z-50 
 			right-0 
 			mobile:-right-5
-			bottom-5 "
+			bottom-5 `}
         >
             <div
                 className=" 
@@ -56,19 +66,21 @@ const ScrollDown = () => {
             >
                 Scroll Down
             </div>
-        </div>
+        </Link>
     );
 };
 
-const Overview = () => {
+const Overview = (props) => {
     return (
-        <div
-            className="
+        <Element
+            name="home"
+            className={`
+                ${props.className}
 				nav__wraper 
 				flex flex-col 
 				items-center 
 				text-xs 
-				rounded-b-xl "
+				rounded-b-xl `}
         >
             <div
                 className="
@@ -78,6 +90,7 @@ const Overview = () => {
 					text-center  "
             >
                 <div
+                data-aos="fade-left"
                     className=" 
 						text-xl 
 						mb-1 
@@ -88,14 +101,17 @@ const Overview = () => {
                     Hello, I'm
                 </div>
                 <div
+                data-aos="fade-left"
                     className=" 
 						text-center 
 						text-3xl 
 						font-semibold"
                 >
+                    
                     Luu Thuong
                 </div>
                 <div
+                data-aos="fade-left"
                     className=" 
 						text-center 
 						text-sm 
@@ -107,6 +123,7 @@ const Overview = () => {
                 </div>
             </div>
             <div
+            data-aos="fade-up"
                 className="
 					flex 
 					justify-center
@@ -120,7 +137,7 @@ const Overview = () => {
                 <ButtonPrimary>Contact</ButtonPrimary>
             </div>
 
-            <div className="">
+            <div  data-aos="zoom-in" className="">
                 <img
                     className="
 							portrait	
@@ -132,13 +149,26 @@ const Overview = () => {
                     alt=""
                 />
             </div>
-        </div>
+        </Element>
     );
 };
 
 const Langding = () => {
+
+
+
+    React.useEffect(() => {
+        AOS.init({
+            duration : 1000,
+            easing:'ease',
+            offset:200,
+            once:true
+          });
+    }, [])
+    
+
     return (
-        <div className="landing">
+        <div className="landing app">
             <div 
 				className="
 					overview__contain 
@@ -149,16 +179,20 @@ const Langding = () => {
 					relative"
 			>
                 <Social />
-                <ScrollDown />
-                <Overview />
+                <ScrollDown  />
+                <Overview data-aos="fade-left" data-scene />
             </div>
-            <div 
+            <Element
+                name="about"
+                data-scene
 				className="
-					"
+				"
 			>
                 <About />
-            </div>
-            <div 
+            </Element>
+            <Element
+                name="skill"
+                data-scene
 				className="
 					flex  
 					justify-center 
@@ -166,8 +200,10 @@ const Langding = () => {
 					mt-10"
 			>
                 <Experient />
-            </div>
-            <div 
+            </Element>
+            <Element
+                name="project" 
+                data-scene
 				className="
 					flex  
 					justify-center 
@@ -175,8 +211,10 @@ const Langding = () => {
 					mt-10"
 			>
                 <Project />
-            </div>
-            <div 
+            </Element>
+            <Element 
+                name="bottom"
+                data-scene
 				className="
 					flex  
 					justify-center 
@@ -184,7 +222,8 @@ const Langding = () => {
 					mt-10"
 			>
                 <Contact />
-            </div>
+            </Element>
+            
         </div>
     );
 };

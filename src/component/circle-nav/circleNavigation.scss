@@ -3,8 +3,8 @@
     position: relative;
 }
 .circle-navi {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     position: fixed;
     z-index: 50;
     right: 10px;
@@ -38,14 +38,14 @@
         box-shadow: $box-shadow-light;
         color: var(--txt-color);
         transform: translateX(110px);
-        transform-origin: 100px;
+        transform-origin: 80px;
         transition: all .3s ease;
         opacity: 0;
         transition-delay: calc(0.05s * var(--i));
 
         &>* {
             transition: all .5s ease;
-            transform: rotate(calc(360deg / -8*var(--i)));
+            transform: rotate(calc(360deg / -6*var(--i)));
             pointer-events: none;
             color: var(--color-primary);
         }
@@ -53,7 +53,7 @@
         &:hover {
             filter: drop-shadow(1px 1px 2px var(--color-main)) drop-shadow(1px 1px 4px var(--color-main)) drop-shadow(1px 1px 8px var(--color-main));
             &>* {
-                transform: rotate(calc(180deg / -8*var(--i)));
+                transform: rotate(calc(180deg / -6*var(--i)));
                 color:var(--txt-main-color);
             }
             ;
@@ -75,7 +75,7 @@
 
         .element {
             opacity:1;
-            transform: rotate(calc(360deg / 8*var(--i)));
+            transform: rotate(calc(360deg / 6*var(--i)));
         }
     }
 }

@@ -8,6 +8,7 @@ import circleData from "./data";
 
 import $ from 'jquery';
 import Color from './../color/Color';
+import { Link } from 'react-scroll';
 
 const CircleNavigation = ({className,onClick}) => {
 
@@ -49,7 +50,9 @@ const CircleNavigation = ({className,onClick}) => {
             </div>
             {circleData.icons.map((item, index) => {
                 return (
-                    <li
+                    <Link
+                        
+                        to={item.to?item.to:''}
                         key={index}
                         style={
                             {
@@ -57,7 +60,7 @@ const CircleNavigation = ({className,onClick}) => {
                             }
                         }
                         onClick={()=>{
-                            item.onClick();
+                            item.onClick&&item.onClick();
                             $('.circle-navi ').removeClass('active')
                         }}
                         className="
@@ -72,10 +75,11 @@ const CircleNavigation = ({className,onClick}) => {
                                     items-center
                                     rounded-full
                                     hover:rotate-90
+                                    cursor-pointer
                                     "
                     >
                         <ion-icon  name={item.className}></ion-icon>
-                    </li>
+                    </Link>
                 );
             })}
         </div>

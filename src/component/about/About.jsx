@@ -7,6 +7,11 @@ import aboutImage from "../../assets/Image/about.jpg";
 
 import Card from './../card/Card';
 
+import '../../../node_modules/aos/dist/aos.css'
+
+import AOS from 'aos'
+
+
 const dataAbout = [
     {
         icon: "school-outline",
@@ -26,14 +31,21 @@ const dataAbout = [
 ];
 
 const About = () => {
+    // React.useEffect(() => {
+    //     AOS.init({
+    //         duration:500,
+    //         easing:'ease-in-cubic'
+    //     })
+    // },[])
     return (
         <div
+       
             className="
                 about 
                 mt-5 
                 w-full "
         >
-            <div className="header">
+            <div  data-aos="zoom-in-up"  className="header">
                 <h1
                     className="
                     text-center 
@@ -63,6 +75,7 @@ const About = () => {
                     items-center"
             >
                 <div
+                  data-aos="fade-right"
                     className="
                         w-1/2 
                         relative  
@@ -85,7 +98,9 @@ const About = () => {
                         alt=""
                     />
                 </div>
+
                 <div
+               
                     className="
                         about__content 
                         w-1/2 
@@ -96,6 +111,7 @@ const About = () => {
                         items-center"
                 >
                     <div
+                    data-aos="fade-up"
                         className="
                             card 
                             w-full 
@@ -106,6 +122,7 @@ const About = () => {
                         <Card item={dataAbout} />
                     </div>
                     <div
+                    data-aos="fade-up"
                         className="
                             content__detail
                             w-2/3 
@@ -123,6 +140,7 @@ const About = () => {
                         React-Redux...
                     </div>
                     <div
+                    data-aos="fade-left"
                         className="
                             flex
                             w-2/3 

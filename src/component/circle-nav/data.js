@@ -5,7 +5,7 @@ const icons=[
     {
         className:'home-outline',
         name:'home',
-        onClick:(e)=>e
+        to:"home"
     },
     {
         className:'color-palette-outline',
@@ -15,32 +15,22 @@ const icons=[
     {
         className:'information-outline',
         name:'information',
-        onClick:e=>e
+        to:"about"
     },
     {
         className:'book-outline',
         name:'education',
-        onClick:(e)=>e
-    },
-    {
-        className:'share-social-outline',
-        name:'social',
-        onClick:(e)=>e
-    },
-    {
-        className:'heart-outline',
-        name:'interest',
-        onClick:(e)=>e
+        to:"skill"
     },
     {
         className:'terminal-outline',
         name:'Project',
-        onClick:(e)=>e
+        to:"project"
     },
     {
         className:'mail-outline',
         name:'contact',
-        onClick:(e)=>e
+        to:"bottom"
     }
 ]
 
