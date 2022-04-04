@@ -5,6 +5,10 @@
  TailwindCss: https://tailwindcss.com/
  
  SwiperJs: https://swiperjs.com/
+ 
+ Scroll-react: https://www.npmjs.com/package/react-scroll
+ 
+ AOS animation: https://github.com/michalsnik/aos
 
 
 
